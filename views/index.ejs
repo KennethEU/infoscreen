@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" href="/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.3/css/swiper.min.css">
+        
+        <title>Marselisborg Gymnasium info screen</title>
+    </head>
+    <div class="logo"><img src="http://marselisborg-gym.dk/~/media/Graphics/Logos/Marselisborg-Gymnasium.ashx" alt=""></div>
+<div class="swiper-container">
+    <div class="swiper-wrapper" id="getNewsSlides">
+       <% allNews.forEach(function(newsItem){ %>
+        <div class="newsSlides swiper-slide">
+            <div class="news_photo" style="background-image: url(<%= newsItem.foto %>);">
+             <% if(newsItem.overskrift === "") { %>
+             </div></div>
+             <% } else { %>
+                <div class="news_overskrift"><span><%= newsItem.overskrift %></span></div>
+                <div class="news_undertitle"><span><%= newsItem.undertitle %></span></div>
+            </div>
+        </div>
+        <% }}); %>
+    </div> 
+    <!-- end newsSlide -->
+    <div class="undermenu">
+
+    </div>
+</div>
+
+    <body>
+<script>
+
+//         overskrift: "Kursus for stille piger",
+//         undertitle: "Tør du ikke sige noget i timerne? Så meld dig til",
+//         foto: "./img/NAT27336.jpg"
+//         overskrift: "Skolens 100 års fødselsdag",
+//         undertitle: "Stor fest for alle elever og personale i Tivoli Friheden",
+//         foto: "./img/tivoli.jpg"
+
+
+// newsOutput += `<div class="newsSlides swiper-slide">
+//             <div class="news_photo">
+//                 <video class="slider-video" width="100%" preload="auto" loop="" autoplay="" style="visibility: visible; width: 100%;"><source src="http://thenewcode.com/assets/videos/polina.mp4" type="video/mp4"></video>
+//             </div>
+//             </div>`;
+
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.3/js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: {
+        delay: 10000,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
+
+    </body>
+</html>

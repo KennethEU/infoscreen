@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" href="/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.3/css/swiper.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+        
+        <title>Marselisborg Gymnasium info screen</title>
+    </head>
+    <body>
+<div class="ui container" style="padding-top: 15px;">
+    <h1>Marselisborg Gymnasiums infoskærm</br></h1>
+    <div class="ui segment">
+        <h2><%= news.overskrift %></h2>
+        <p><%= news.undertitle %></p>
+        <img class="ui image" src="<%= news.foto %>">
+    </div>
+    <a href="/admin">Tilbage til oversigt</a>
+</div>
+</body>
+</html>
